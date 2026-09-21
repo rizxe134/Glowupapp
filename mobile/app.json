@@ -1,0 +1,45 @@
+{
+  "expo": {
+    "name": "Glow Guide",
+    "slug": "glow-guide",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#F3E7D8"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.glowup.glowguide",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Glow Guide uses the camera so you can analyze skin, hair, or body photos on your own Ollama server.",
+        "NSPhotoLibraryUsageDescription": "Glow Guide uses your photo library when you choose an existing picture to analyze.",
+        "NSAppTransportSecurity": {
+          "NSAllowsArbitraryLoads": true,
+          "NSAllowsLocalNetworking": true
+        }
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#F3E7D8"
+      },
+      "permissions": ["CAMERA"],
+      "package": "com.glowup.glowguide"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Glow Guide to use the camera for on-device photo analysis via your Mac’s Ollama."
+        }
+      ],
+      "expo-image-picker"
+    ]
+  }
+}
