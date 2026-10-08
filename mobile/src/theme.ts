@@ -14,6 +14,8 @@ export const palette = {
 export const styles = StyleSheet.create({
   root: { flex: 1, backgroundColor: palette.bg },
   scroll: { padding: 20, paddingBottom: 48 },
+  homeHeader: { alignItems: "center", marginBottom: 4 },
+  homeLogo: { width: 72, height: 72, marginBottom: 12 },
   kicker: {
     color: "#9E3F34",
     letterSpacing: 2,

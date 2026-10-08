@@ -1,19 +1,6 @@
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 
-function Mark() {
-  return (
-    <span className="brand-mark" aria-hidden="true">
-      <svg viewBox="0 0 24 24" fill="none">
-        <path
-          d="M12 3c5 5 8 8.2 8 12.2A8 8 0 1 1 4 15.2C4 11.2 7 8 12 3Z"
-          fill="#FFF8F1"
-        />
-      </svg>
-    </span>
-  );
-}
-
 export default function Shell({
   children,
   actions,
@@ -25,7 +12,7 @@ export default function Shell({
     <div className="shell">
       <header className="nav">
         <Link to="/" className="brand">
-          <Mark />
+          <img className="brand-mark" src="/logo.svg" alt="" width={36} height={36} />
           <span>
             <span className="brand-name">Glow Guide</span>
             <span className="brand-sub">Glowup</span>

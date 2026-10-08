@@ -1,4 +1,4 @@
-import { Pressable, SafeAreaView, ScrollView, Text, View } from "react-native";
+import { Image, Pressable, SafeAreaView, ScrollView, Text, View } from "react-native";
 import { MEDICAL_DISCLAIMER } from "@glow/shared";
 import type { Nav } from "../nav";
 import { styles } from "../theme";
@@ -7,7 +7,14 @@ export default function HomeScreen({ nav }: { nav: Nav }) {
   return (
     <SafeAreaView style={styles.root}>
       <ScrollView contentContainerStyle={styles.scroll}>
-        <Text style={styles.kicker}>Glowup · local ritual</Text>
+        <View style={styles.homeHeader}>
+          <Image
+            source={require("../../assets/splash-icon.png")}
+            style={styles.homeLogo}
+            accessibilityLabel="Glow Guide"
+          />
+          <Text style={styles.kicker}>Glowup · local ritual</Text>
+        </View>
         <Text style={styles.title}>Glow Guide for skin, hair, and body.</Text>
         <Text style={styles.lede}>
           The quiz works fully offline. Photo analysis talks only to Ollama on your Mac — never a
