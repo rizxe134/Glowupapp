@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 420" role="img" aria-label="Glow Guide — quiz + photo care recommendations">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF7F2"/>
+      <stop offset="55%" stop-color="#FFE8DE"/>
+      <stop offset="100%" stop-color="#FFF1D6"/>
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFB7A5"/>
+      <stop offset="45%" stop-color="#F48CA0"/>
+      <stop offset="100%" stop-color="#E8A84A"/>
+    </linearGradient>
+    <linearGradient id="innerGrad" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#FFF6F0"/>
+      <stop offset="100%" stop-color="#FFE0D0"/>
+    </linearGradient>
+    <radialGradient id="softGlow" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#FFD4C4" stop-opacity="0.85"/>
+      <stop offset="70%" stop-color="#F48CA0" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#E8A84A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C45B6E"/>
+      <stop offset="100%" stop-color="#C4872A"/>
+    </linearGradient>
+    <filter id="blurSoft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+  </defs>
+
+  <!-- Soft background -->
+  <rect width="1280" height="420" rx="32" fill="url(#bg)"/>
+
+  <!-- Decorative soft orbs -->
+  <circle cx="1100" cy="80" r="90" fill="#FFD4C4" opacity="0.35"/>
+  <circle cx="1180" cy="340" r="70" fill="#FFE8A8" opacity="0.4"/>
+  <circle cx="80" cy="360" r="60" fill="#F8C8D4" opacity="0.35"/>
+
+  <!-- Logo mark (scaled) -->
+  <g transform="translate(120, 90) scale(0.47)">
+    <circle cx="256" cy="256" r="190" fill="url(#softGlow)" filter="url(#blurSoft)"/>
+    <circle cx="256" cy="256" r="168" fill="url(#glowGrad)"/>
+    <circle cx="256" cy="248" r="118" fill="url(#innerGrad)" opacity="0.95"/>
+    <g transform="translate(256 248)">
+      <path d="M0,-72 C8,-28 28,-8 72,0 C28,8 8,28 0,72 C-8,28 -28,8 -72,0 C-28,-8 -8,-28 0,-72 Z"
+            fill="url(#glowGrad)"/>
+      <path d="M78,-78 C82,-58 92,-52 112,-48 C92,-44 82,-34 78,-14 C74,-34 64,-44 44,-48 C64,-52 74,-58 78,-78 Z"
+            fill="#E8A84A" opacity="0.95"/>
+      <path d="M-88,62 C-85,74 -78,78 -66,81 C-78,84 -85,90 -88,102 C-91,90 -98,84 -110,81 C-98,78 -91,74 -88,62 Z"
+            fill="#F48CA0" opacity="0.9"/>
+    </g>
+    <circle cx="168" cy="156" r="6" fill="#FFF8F2" opacity="0.85"/>
+    <circle cx="350" cy="320" r="4.5" fill="#FFF8F2" opacity="0.7"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="420" y="195" font-family="ui-rounded, 'SF Pro Rounded', 'Segoe UI', system-ui, sans-serif"
+        font-size="92" font-weight="700" fill="url(#textGrad)" letter-spacing="-1.5">Glow Guide</text>
+  <text x="424" y="255" font-family="ui-rounded, 'SF Pro Rounded', 'Segoe UI', system-ui, sans-serif"
+        font-size="28" font-weight="500" fill="#9A6B5C" letter-spacing="0.5">Quiz + photo care routines · local AI</text>
+  <text x="424" y="300" font-family="ui-rounded, 'SF Pro Rounded', 'Segoe UI', system-ui, sans-serif"
+        font-size="22" font-weight="400" fill="#B08A7A">Skin · Hair · Body · no cloud APIs</text>
+</svg>

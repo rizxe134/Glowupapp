@@ -1,14 +1,37 @@
+<p align="center">
+  <img src="docs/assets/banner.svg" alt="Glow Guide — quiz + photo care recommendations" width="720" />
+</p>
+
+<p align="center">
+  <strong>Quiz + photo care routines for skin, hair, and body — powered by local AI.</strong>
+</p>
+
+<p align="center">
+  <img src="docs/assets/logo.svg" alt="Glow Guide logo" width="96" />
+</p>
+
 # Glow Guide (Glowup)
 
-A local **quiz + photo** app that recommends skin, hair, and body products. Display name: **Glow Guide**. GitHub repo: `Glowupapp`.
+A local **quiz + photo** app that recommends skin, hair, and body product types. Display name: **Glow Guide**. GitHub repo: [`Glowupapp`](https://github.com/rizxe134/Glowupapp).
 
 No API keys. Recommendations come from a curated catalog and a TypeScript rules engine in `shared/`. Photo analysis uses **local Ollama vision only** — not OpenAI, not Hugging Face Inference, not any paid cloud API.
 
+## Features
+
+- **Guided quiz** — skin type & concerns, hair, scalp, body, and budget, with progress, back, and start over
+- **Photo analysis** — drop a photo or use the camera; concerns run through a local Ollama vision model on your Mac
+- **Skin / Hair / Body routines** — ordered steps, product categories, why it fits, example names, and “look for” label cues
+- **iPhone app** — Expo mobile client; quiz works offline; photos talk to Ollama on your Mac over Wi‑Fi
+- **Fully local** — no paid cloud APIs; swap models (`qwen3-vl:4b` default, `moondream` for low RAM)
+
+## Project structure
+
 ```
 Glowupapp/
-  src/                 Vite + React web app
-  shared/src/          Types, catalog, rules engine, vision prompt
+  src/                 Vite + React + TypeScript web app
+  shared/src/          Types, curated catalog, rules engine, vision prompt
   mobile/              Expo iPhone app
+  docs/assets/         Logo and README banner
 ```
 
 ## Web (Mac)
@@ -75,8 +98,8 @@ npm install
 npx expo start
 ```
 
-Quiz works offline. Photo analysis uses Ollama on the Mac (`http://127.0.0.1:11434` in Simulator, or the Mac’s LAN IP on a device).
+Quiz works offline. Photo analysis uses Ollama on the Mac (`http://127.0.0.1:11434` in Simulator, or the Mac’s LAN IP on a device — same Wi‑Fi). Configure the host in the app’s **Ollama settings**, then **Save & ping**.
 
 ## Disclaimer
 
-Glow Guide is not medical advice. It does not diagnose or treat disease. Patch-test new products and talk to a clinician when something worries you.
+Glow Guide is **not medical advice**. It does not diagnose or treat disease. Patch-test new products and talk to a clinician when something worries you.
